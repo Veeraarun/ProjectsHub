@@ -1,96 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Hub</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header>
     <div class="headerContainer">
       <h1>Veeraarun V</h1>
       <h3>Aspiring Full Stack Web Developer</h3>
-      <p>Collection of full stack web development projects built for learning and interviews.</p>
+      <p>
+        Collection of full stack web development projects built for learning
+        and interviews.
+      </p>
     </div>
   </header>
 
-  <div class="navigation filters" role="tablist" aria-label="Project categories">
-    <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
-    <button class="filter-btn" data-filter="javascript" aria-pressed="false">JavaScript</button>
-    <button class="filter-btn" data-filter="Others" aria-pressed="false">Others</button>
-  </div>
-  <hr>
+  <nav class="navigation filters" role="tablist" aria-label="Project categories">
+    <button class="filter-btn active" data-filter="all" aria-pressed="true">
+      All
+    </button>
+    <button class="filter-btn" data-filter="javascript" aria-pressed="false">
+      JavaScript
+    </button>
+    <button class="filter-btn" data-filter="Others" aria-pressed="false">
+      Others
+    </button>
+  </nav>
 
-  <div class="hub">
+  <main class="hub">
     <h2>Projects</h2>
     <p id="numOfProjects">number of projects</p>
 
-  <div class="projectsHub">
+    <section class="projectsHub">
 
-      <div class="projectsContainer project-item" data-category="Javascript">
-        <div class="Weather"></div>
-          <h3>Weather Dashboard</h3>
-          <p>Real-time weather application using OpenWeather API with location search and 5-day forecast</p>
-          <div class="tech">
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
-          <button class="demoBtn">Live Demo</button>
-          <button>View Code</button>
-      </div>
+      <article class="projectsContainer project-item" data-category="Javascript">
+        <h3>VISION-X</h3>
+        <p>
+          Built a virtual reality prototype for mental health therapy, selected as finalist at IncepTrix Hackathon 2025, Jain University, Bangalore.
+        </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <button class="demoBtn" onclick="window.open('https://veeraarun.github.io/Vision-X/')">Live Demo</button>
+        <button onclick="window.open('https://github.com/Veeraarun/Vision-X')">View Code</button>
+      </article>
 
-      <div class="projectsContainer project-item" data-category="javascript">
-        <div class="Weather"></div>
-          <h3>Weather Dashboard</h3>
-          <p>Real-time weather application using OpenWeather API with location search and 5-day forecast</p>
-          <div class="tech">
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
-          <button class="demoBtn">Live Demo</button>
-          <button>View Code</button>
-      </div>
+      <article class="projectsContainer project-item" data-category="javascript">
+        <h3>SHIELD-X</h3>
+        <p>
+          Social Media Threat Finder — Developed a prototype that detects & flags harmful or abusive social media content using AI-based analysis.
+        </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <button class="demoBtn" onclick="window.open('https://veeraarun.github.io/Shield-X/')">Live Demo</button>
+        <button onclick="window.open('https://github.com/Veeraarun/Shield-X')">View Code</button>
+      </article>
 
-      <div class="projectsContainer project-item" data-category="Others">
-        <div class="Weather"></div>
-          <h3>Weather Dashboard</h3>
-          <p>Real-time weather application using OpenWeather API with location search and 5-day forecast</p>
-          <div class="tech">
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
-          <button class="demoBtn">Live Demo</button>
-          <button>View Code</button>
-      </div>
+      <article class="projectsContainer project-item" data-category="Others">
+        <h3>To-Do List</h3>
+        <p>
+          A ToDo List web app built with HTML, CSS, and JavaScript that lets users add, view, and delete tasks with name, date, and time.
+        </p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <button class="demoBtn" onclick="window.open('https://veeraarun.github.io/My-Task-ToDo/')">Live Demo</button>
+        <button onclick="window.open('https://github.com/Veeraarun/My-Task-ToDo')">View Code</button>
+      </article>
 
-    </div>
+    </section>
+  </main>
+  <hr />
 
-  </div>
-  
   <footer>
-
     <div class="footerContainer">
       <div class="rights">
         <p>2026 Veera. All rights reserved.</p>
       </div>
 
       <div class="socialLinks">
-        <button>GitHub</button>
-        <button>LinkedIn</button>
+        <button onclick="window.open('https://github.com/Veeraarun')"><img src="Icons/git.png"></button>
+        <button onclick="window.open('https://www.linkedin.com/in/veera-arun-v')"><img src="Icons/in.png"></button>
+        <button onclick="window.open('https://veeraarun.github.io/Portfolio/')"><img src="Icons/portfolio.png"></button>
       </div>
     </div>
-
   </footer>
-
 </body>
+
 </html>

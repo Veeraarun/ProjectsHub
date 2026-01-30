@@ -171,8 +171,10 @@ footer {
   grid-template-columns: 1fr 1fr;
 }
 .rights {
+  margin-top: 10px;
   justify-content: start;
   font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.825);
 }
 
 .socialLinks {
@@ -194,4 +196,9 @@ footer {
     padding: 5px 10px;
     border-radius: 10px;
   }
+
+  img{
+    height: 20px;
+  }
 }
+
