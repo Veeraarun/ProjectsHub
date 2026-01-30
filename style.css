@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Orbitron:wght@400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styles of the heaer */
+
+header {
+  background-color: black;
+  color: white;
+  padding: 20px 10px;
+}
+
+.headerContainer {
+  width: 1000px;
+  margin: auto;
+
+  h3 {
+    font-size: 0.8rem;
+    margin: 10px 0px 5px 0px;
+    color: rgba(255, 255, 255, 0.794);
+  }
+  p {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.794);
+  }
+}
+
+/* Styles of Category */
+
+.navigation {
+  padding: 0.7rem 0;
+  width: 1000px;
+  margin: auto;
+}
+
+.filter-btn {
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.619);
+  padding: 5px 15px;
+  margin-right: 10px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.314);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.filter-btn:hover {
+  background-color: black;
+  color: white;
+}
+.filter-btn.active {
+  background: #000; color: #fff; box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+hr {
+  color: gray;
+}
+
+/* Styles for the Main Content */
+
+.hub {
+  width: 1000px;
+  margin: auto;
+
+  h2 {
+    margin-top: 30px;
+    font-weight: 800;
+  }
+  #numOfProjects {
+    font-size: 0.7rem;
+    color: rgba(0, 0, 0, 0.39);
+  }
+}
+
+.projectsHub {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
+  height: 100%;
+  margin: 1rem 0;
+}
+
+.projectsContainer {
+  padding: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.113);
+  border-radius: 5px;
+
+  h3 {
+    font-weight: 800;
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.465);
+    margin: 14px 0;
+  }
+
+  ul {
+    font-size: 0.6rem;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    li {
+      color: rgba(0, 0, 0, 0.451);
+      background-color: rgba(128, 128, 128, 0.096);
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+  }
+
+  button {
+    color: rgba(0, 0, 0, 0.634);
+    font-size: 0.7rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.317);
+  }
+
+  .demoBtn {
+    background-color: black;
+    color: white;
+  }
+}
+
+.project-item {
+  transition: opacity .32s ease, transform .32s ease;
+  opacity: 1;
+  transform: translateY(0);
+  will-change: opacity, transform;
+}
+
+/* Hiding state (animated) */
+.project-item.hiding {
+  opacity: 0;
+  transform: translateY(10px) scale(.98);
+  pointer-events: none;          /* prevent interaction while hiding */
+  visibility: visible;          /* keep visible until display:none applied after transition */
+}
+
+footer {
+  width: 100%;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+}
+
+.footerContainer {
+  color: white;
+  width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.rights {
+  justify-content: start;
+  font-size: 0.7rem;
+}
+
+.socialLinks {
+  justify-content: end;
+  text-align: end;
+
+  button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 5px 10px;
+  }
+  button:hover {
+    background-color: grey;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+}
