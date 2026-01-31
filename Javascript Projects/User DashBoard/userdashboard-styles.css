@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: rgb(241, 241, 241);
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+.userCard:hover,
+.filterBtn:hover,
+.totalCard:hover,
+.averageCard:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.44);
+}
+
+header {
+    background: linear-gradient(90deg,rgba(107, 51, 248, 1) 0%, rgba(152, 16, 250, 1) 46%, rgba(191, 41, 183, 1) 100%);
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.414);
+}
+header img{
+    width: 35px;
+}
+
+header h1 {
+    width: 1000px;
+    margin: auto;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 1000px;
+    margin: 30px auto;
+}
+.totalCard{
+    background: linear-gradient(39deg,rgba(38, 131, 255, 1) 0%, rgba(0, 181, 223, 1) 84%, rgba(191, 234, 255, 1) 100%);
+}
+
+.averageCard{
+    background: linear-gradient(39deg,rgba(143, 78, 255, 1) 0%, rgba(152, 28, 251, 1) 84%, rgba(185, 137, 240, 1) 100%);
+}
+
+.totalCard,
+.averageCard {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+    transition: all ease 0.3s;
+
+    img{
+        height: 20px;
+    }
+}
+
+.totalCard p,
+.averageCard p {
+    color: rgba(0, 0, 0, 0.43);
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+}
+
+.totalCard h2,
+.averageCard h2 {
+    font-size: 2.3rem;
+}
+
+.filterBtnSection {
+    width: 1000px;
+    margin: auto;
+
+    img{
+        height: 15px;
+    }
+}
+
+.filterBtn {
+    margin: 30px 0;
+    padding: 0.4rem 0.6rem;
+    background-color: white;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.filterBtn.active {
+    background-color: var(--color-primary, #2563eb);
+    color: #fff;
+}
+
+.userCards {
+    width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.userCard {
+    background-color: white;
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14);
+    transition: all ease 0.3s;
+}
+
+.userCard .name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.userCard .age {
+    margin: 15px 0;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.443);
+}
+
+.userCard .statusBtn {
+    font-size: 0.8rem;
+    background-color: white;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0, 88, 10, 0.14);
+    padding: 0.3rem 0.8rem;
+    border-radius: 10px;
+}
+
+.userCard .statusBtn.active {
+    background-color: rgb(129, 248, 129);
+}
+
+.userCard .statusBtn.inactive {
+    background-color: rgba(128, 128, 128, 0.316);
+}
+
+.userCard img{
+    width: 15px;
+    vertical-align: middle;
+}
+
+.hideCard {
+    display: none !important;
+}

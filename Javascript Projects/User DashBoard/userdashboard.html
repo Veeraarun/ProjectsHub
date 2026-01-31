@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash Board</title>
+    <link rel="stylesheet" href="userdashboard-styles.css">
+</head>
+
+<body>
+    <header>
+        <h1><img src="Icons/logo.png"> User Dashboard</h1>
+    </header>
+
+    <main>
+        <section class="summary">
+            <div class="totalCard">
+                <p><img src="Icons/totalUser.png"> Users</p>
+                <h2 class="totalCount">12</h2>
+            </div>
+            <div class="averageCard">
+                <p> <img src="Icons/averageAge.png"> Average Age</p>
+                <h2 class="averageValue">23.2</h2>
+            </div>
+        </section>
+
+        <section class="filterBtnSection">
+            <button class="filterBtn" onclick="hideInactive()"> <img src="Icons/filter.png"> Active Users</button>
+        </section>
+
+        <section class="userCards">
+
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="userdashboard-script.js"></script>
+</body>
+
+</html>
