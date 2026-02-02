@@ -1,38 +1,23 @@
-const users = [
-    { name: "Pugazh", age: 20, active: true },
-    { name: "Kabish", age: 21, active: true },
-    { name: "Aswin", age: 26, active: false },
-    { name: "Abinesh", age: 15, active: true },
-    { name: "Tholks", age: 32, active: false },
-    { name: "Suhail", age: 17, active: true },
-    { name: "Gowri", age: 23, active: false },
-    { name: "Sudha", age: 45, active: false },
-    { name: "Venkat", age: 55, active: true },
-    { name: "Bala Lakshmi", age: 48, active: true },
-    { name: "Kamaraj", age: 55, active: false },
-    { name: "Naveen", age: 20, active: true },
+import User from "./user-data.js";
+
+const users =[
+    new User("Sadie Sink", 22),
+    new User("Kabish Durai", 21),
+    new User("Pugazh Noob", 20)
 ];
 
 let userHtml = "";
 
-users.forEach((user) => {
-    let status,
-        colorCode = "";
-    if (user.active) {
-        status = "Active";
-        colorCode = "active";
-    } else {
-        status = "Inactive";
-        colorCode = "inactive";
-    }
+users.forEach((user, index) => {
+    const status = user.statusText;
+    const colorCode = user.active ? "active" : "inactive";
 
     userHtml += `
-        <article class="userCard" data-active="${user.active}">
+        <article class="userCard" data-active="${user.active}" data-index="${index}">
             <p class="name">${user.name}</p>
             <p class="age">Age: ${user.age}</p>
             <button class="statusBtn ${colorCode}"><img src="Icons/dot.png"> ${status}</button>
         </article>
-
     `;
 });
 
