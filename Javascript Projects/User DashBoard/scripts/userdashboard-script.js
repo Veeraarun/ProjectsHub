@@ -1,10 +1,20 @@
 import User from "./user-data.js";
 
-const users =[
+const users = [
     new User("Sadie Sink", 22),
     new User("Kabish Durai", 21),
-    new User("Pugazh Noob", 20)
+    new User("Pugazh Noob", 20),
+    new User("Ava Thompson", 22),
+    new User("Liam Johnson", 28),
+    new User("Mia Garcia", 31),
+    new User("Noah Lee", 24),
+    new User("Olivia Brown", 26),
+    new User("Ethan Wilson", 29),
+    new User("Isabella Taylor", 27),
+    new User("Noah Reed", 30),
+    new User("Zara Khan", 25)
 ];
+
 
 let userHtml = "";
 
