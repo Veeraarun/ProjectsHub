@@ -1,22 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300..700&family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap");
 
 :root {
-  --bg-950: #000000;
-  --bg-900: #0d0d0d;
-  --bg-800: #111111;
-  --panel: rgba(17, 17, 17, 0.82);
-  --panel-strong: rgba(13, 13, 13, 0.96);
-  --panel-soft: rgba(255, 255, 255, 0.02);
-  --text: #ffffff;
-  --text-soft: #abb2bf;
-  --text-muted: #d7ffd9;
-  --accent: #2effa0;
-  --accent-strong: #5bffaa;
-  --accent-deep: #17aa00;
-  --accent-dark: #0b5300;
-  --border: rgba(91, 255, 170, 0.18);
-  --shadow: rgba(46, 255, 160, 0.22);
-  --shadow-strong: rgba(23, 170, 0, 0.4);
+  --bg-950: #ffffff;
+  --bg-900: #f8f9fb;
+  --bg-800: #f0f2f5;
+  --panel: rgba(255, 255, 255, 0.95);
+  --panel-strong: rgba(248, 249, 251, 0.98);
+  --panel-soft: rgba(44, 62, 80, 0.04);
+  --text: #1a202c;
+  --text-soft: #4a5568;
+  --text-muted: #718096;
+  --accent: #2c5aa0;
+  --accent-strong: #1e3a8a;
+  --accent-deep: #1a3a52;
+  --accent-dark: #0f1f2e;
+  --border: rgba(44, 90, 160, 0.12);
+  --shadow: rgba(44, 90, 160, 0.08);
+  --shadow-strong: rgba(26, 58, 82, 0.15);
 }
 
 * {
@@ -31,15 +31,14 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: "JetBrains Mono", "Consolas", monospace;
-  background:
-    radial-gradient(circle at top left, rgba(46, 255, 160, 0.22), transparent 28%),
-    radial-gradient(circle at 80% 12%, rgba(23, 170, 0, 0.18), transparent 25%),
-    linear-gradient(180deg, #000 0%, #0d0d0d 25%, #111111 100%);
+  font-family: "Times New Roman", serif;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 50%, #f0f2f5 100%);
   color: var(--text);
   letter-spacing: 0.02em;
   position: relative;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 body::before,
@@ -58,13 +57,13 @@ body::after {
 body::before {
   top: -8rem;
   left: -8rem;
-  background: rgba(46, 255, 160, 0.08);
+  background: rgba(44, 90, 160, 0.04);
 }
 
 body::after {
   right: -9rem;
   bottom: -9rem;
-  background: rgba(23, 170, 0, 0.12);
+  background: rgba(44, 90, 160, 0.03);
 }
 
 header,
@@ -73,6 +72,10 @@ main,
 footer {
   position: relative;
   z-index: 1;
+}
+
+main {
+  flex-grow: 1;
 }
 
 /* Styles of the header */
@@ -85,19 +88,20 @@ header {
   width: min(1100px, calc(100% - 2rem));
   margin: auto;
   padding: 1.5rem 1.75rem;
-  background: linear-gradient(135deg, rgba(17, 17, 17, 0.48), rgba(13, 13, 13, 0.52));
-  border: 1px solid rgba(91, 255, 170, 0.28);
-  border-radius: 18px;
-  box-shadow: inset 0 0 0 1px rgba(46, 255, 160, 0.12), 0 0 32px rgba(46, 255, 160, 0.15), inset 0 0 20px rgba(46, 255, 160, 0.05);
-  backdrop-filter: blur(18px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 251, 0.95));
+  border: 1px solid rgba(44, 90, 160, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44, 90, 160, 0.08);
+  backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
 
 .headerContainer h1 {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Times New Roman", serif;
   font-weight: 700;
   font-size: clamp(1.9rem, 4vw, 3.25rem);
   letter-spacing: 0.12em;
+  color: #2c5aa0;
   text-transform: uppercase;
   background: linear-gradient(120deg, var(--text-muted) 0%, var(--accent-strong) 38%, var(--accent) 60%, var(--accent-deep) 100%);
   -webkit-background-clip: text;
@@ -116,7 +120,7 @@ header {
 .headerContainer p {
   max-width: 40rem;
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.72);
+  color: #4a5568;
   line-height: 1.7;
 }
 
@@ -130,46 +134,46 @@ header {
   gap: 0.75rem;
   flex-wrap: wrap;
   padding: 0.8rem 0.6rem;
-  background: linear-gradient(135deg, rgba(17, 17, 17, 0.42), rgba(13, 13, 13, 0.48));
-  border: 1px solid rgba(91, 255, 170, 0.24);
-  border-radius: 14px;
-  backdrop-filter: blur(16px);
-  box-shadow: inset 0 0 0 1px rgba(46, 255, 160, 0.08), 0 0 20px rgba(46, 255, 160, 0.08);
+  background: linear-gradient(135deg, rgba(248, 249, 251, 0.8), rgba(240, 242, 245, 0.9));
+  border: 1px solid rgba(44, 90, 160, 0.15);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px rgba(44, 90, 160, 0.08);
 }
 
 .filter-btn {
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Times New Roman", serif;
   font-size: 0.72rem;
-  color: var(--text-soft);
+  color: #4a5568;
   padding: 0.7rem 1rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(91, 255, 170, 0.18);
-  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
 }
 
 .filter-btn:hover {
-  color: var(--text);
-  border-color: rgba(91, 255, 170, 0.48);
-  background: rgba(46, 255, 160, 0.08);
-  box-shadow: 0 0 24px rgba(46, 255, 160, 0.18), inset 0 0 12px rgba(46, 255, 160, 0.06);
+  color: #1a202c;
+  border-color: #2c5aa0;
+  background: #f0f2f5;
+  box-shadow: 0 2px 8px rgba(44, 90, 160, 0.12);
   transform: translateY(-2px);
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, rgba(23, 170, 0, 0.2), rgba(46, 255, 160, 0.08));
-  color: var(--text);
-  border-color: rgba(91, 255, 170, 0.72);
-  box-shadow: 0 0 20px rgba(46, 255, 160, 0.2), inset 0 0 16px rgba(91, 255, 170, 0.08);
+  background: #2c5aa0;
+  color: #ffffff;
+  border-color: #2c5aa0;
+  box-shadow: 0 2px 8px rgba(44, 90, 160, 0.2);
 }
 
 hr {
   border: none;
-  border-top: 1px solid rgba(91, 255, 170, 0.12);
+  border-top: 1px solid rgba(44, 90, 160, 0.12);
   width: min(1100px, calc(100% - 2rem));
   margin: 1.5rem auto 0;
 }
@@ -184,7 +188,7 @@ hr {
 
 .hub h2 {
   margin-top: 0.5rem;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Times New Roman", serif;
   font-size: clamp(1.3rem, 2vw, 2rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -209,24 +213,23 @@ hr {
 
 .projectsContainer {
   padding: 1.2rem 1.1rem 1.1rem;
-  background: linear-gradient(135deg, rgba(17, 17, 17, 0.72), rgba(13, 13, 13, 0.84));
-  border: 1px solid rgba(91, 255, 170, 0.2);
-  border-radius: 16px;
-  box-shadow: inset 0 0 0 1px rgba(46, 255, 160, 0.08), 0 0 24px rgba(46, 255, 160, 0.1), inset 0 0 16px rgba(46, 255, 160, 0.04);
-  backdrop-filter: blur(12px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+  background: #ffffff;
+  border: 1px solid rgba(44, 90, 160, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(44, 90, 160, 0.1);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .projectsContainer:hover {
-  transform: translateY(-6px);
-  border-color: rgba(91, 255, 170, 0.52);
-  background: linear-gradient(135deg, rgba(17, 17, 17, 0.64), rgba(13, 13, 13, 0.76));
-  box-shadow: 0 0 36px rgba(46, 255, 160, 0.22), inset 0 0 24px rgba(91, 255, 170, 0.08);
-  backdrop-filter: blur(14px);
+  transform: translateY(-4px);
+  border-color: #2c5aa0;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(44, 90, 160, 0.15);
 }
 
 .projectsContainer h3 {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Times New Roman", serif;
   font-size: 1rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -235,7 +238,7 @@ hr {
 
 .projectsContainer p {
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #4a5568;
   line-height: 1.8;
   margin: 0.9rem 0 1rem;
 }
@@ -250,9 +253,9 @@ hr {
 }
 
 .projectsContainer li {
-  color: var(--text-muted);
-  background: rgba(91, 255, 170, 0.08);
-  border: 1px solid rgba(91, 255, 170, 0.16);
+  color: #2c5aa0;
+  background: rgba(44, 90, 160, 0.08);
+  border: 1px solid rgba(44, 90, 160, 0.16);
   padding: 0.4rem 0.6rem;
   border-radius: 999px;
   letter-spacing: 0.06em;
@@ -260,29 +263,29 @@ hr {
 }
 
 .projectsContainer button {
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Times New Roman", serif;
   font-size: 0.7rem;
   padding: 0.6rem 0.9rem;
   cursor: pointer;
-  border-radius: 10px;
-  border: 1px solid rgba(91, 255, 170, 0.24);
-  background: rgba(255, 255, 255, 0.02);
-  color: var(--text);
+  border-radius: 8px;
+  border: 1px solid rgba(44, 90, 160, 0.24);
+  background: #f8f9fb;
+  color: #2c5aa0;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  backdrop-filter: blur(8px);
 }
 
 .projectsContainer button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 0 18px rgba(46, 255, 160, 0.14);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(44, 90, 160, 0.15);
+  border-color: #2c5aa0;
 }
 
 .projectsContainer .demoBtn {
-  background: linear-gradient(135deg, rgba(23, 170, 0, 0.28), rgba(46, 255, 160, 0.14));
-  border-color: rgba(91, 255, 170, 0.8);
-  color: var(--text);
+  background: #2c5aa0;
+  border-color: #2c5aa0;
+  color: #ffffff;
   margin-right: 0.5rem;
 }
 
@@ -304,9 +307,9 @@ footer {
   width: 100%;
   padding: 1rem 1rem 1.5rem;
   position: relative;
-  background: rgba(0, 0, 0, 0.72);
-  border-top: 1px solid rgba(91, 255, 170, 0.12);
-  backdrop-filter: blur(12px);
+  background: #f8f9fb;
+  border-top: 1px solid rgba(44, 90, 160, 0.12);
+  backdrop-filter: blur(4px);
 }
 
 .footerContainer {
@@ -320,7 +323,7 @@ footer {
 
 .rights {
   font-size: 0.72rem;
-  color: var(--text-soft);
+  color: #718096;
   letter-spacing: 0.06em;
 }
 
@@ -332,10 +335,10 @@ footer {
 }
 
 .socialLinks button {
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(91, 255, 170, 0.18);
-  border-radius: 10px;
+  color: #2c5aa0;
+  background: #ffffff;
+  border: 1px solid rgba(44, 90, 160, 0.18);
+  border-radius: 8px;
   margin: 0;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -343,9 +346,9 @@ footer {
 }
 
 .socialLinks button:hover {
-  background: rgba(91, 255, 170, 0.08);
-  border-color: rgba(91, 255, 170, 0.56);
-  box-shadow: 0 0 16px rgba(46, 255, 160, 0.12);
+  background: #e6f0ff;
+  border-color: #2c5aa0;
+  box-shadow: 0 2px 6px rgba(44, 90, 160, 0.12);
 }
 
 .socialLinks img {
